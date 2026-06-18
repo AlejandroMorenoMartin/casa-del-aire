@@ -25,38 +25,38 @@ const {
 ---
 
 <header class="page-header">
-  <div class="page-header__left">
+  <div class="page-header__top">
     <h1 data-i18n={titleKey}>{titleFallback}</h1>
 
     {subtitleKey && (
       <p class="small" style="color: var(--bl-100);" data-i18n={subtitleKey}>{subtitleFallback}</p>
     )}
 
-    {(locationKey || capacityKey) && (
-      <div class="page-header__meta">
-        {locationKey && (
-          <div class="page-header__meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            <a
-              href={locationHref}
-              target="_blank"
-              rel="noopener"
-              class="small link link-external page-header__link"
-              data-i18n={locationKey}
-            >{locationFallback}</a>
-          </div>
-        )}
-        {capacityKey && (
-          <div class="page-header__meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-            <span class="small" data-i18n={capacityKey}>{capacityFallback}</span>
-          </div>
-        )}
-      </div>
-    )}
+    <div class="page-header__actions">
+      <slot />
+    </div>
   </div>
 
-  <div class="page-header__actions">
-    <slot />
-  </div>
+  {(locationKey || capacityKey) && (
+    <div class="page-header__meta">
+      {locationKey && (
+        <div class="page-header__meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <a
+            href={locationHref}
+            target="_blank"
+            rel="noopener"
+            class="small link link-external page-header__link"
+            data-i18n={locationKey}
+          >{locationFallback}</a>
+        </div>
+      )}
+      {capacityKey && (
+        <div class="page-header__meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <span class="small" data-i18n={capacityKey}>{capacityFallback}</span>
+        </div>
+      )}
+    </div>
+  )}
 </header>
