@@ -30,15 +30,12 @@ jobs:
         run: pnpm build
 
       - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.SFTP_HOST }}
+          host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./dist/
-          server-dir: /clickandbuilds/CasadelAire/
-          exclude: |
-            **/.git*
-            **/.git*/**
+          port: 22
+          source: "dist/*"
+          target: /clickandbuilds/CasadelAire
+          strip_components: 1
