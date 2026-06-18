@@ -1,0 +1,24 @@
+---
+---
+
+<div id="modal-menu" class="modal modal--menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal-menu__content">
+    <div style="display: flex; flex-direction: column; gap: var(--sp-xxs);">
+      <p class="small" data-i18n="components.modals.menu.pages_title">Páginas</p>
+      <nav style="display: flex; flex-direction: column; gap: var(--sp-xxs);">
+        <a href="/" class="modal-menu__link regular" data-nav="/" data-i18n="components.modals.menu.home">Visita</a>
+        <a href="/la-casa" class="modal-menu__link regular" data-nav="/la-casa" data-i18n="components.modals.menu.casa">La Casa</a>
+        <a href="/entorno" class="modal-menu__link regular" data-nav="/entorno" data-i18n="components.modals.menu.entorno">Entorno</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  document.querySelectorAll("[data-nav]").forEach((link) => {
+    const target = (link.getAttribute("data-nav") ?? "").replace(/\/$/, "") || "/";
+    if (target === path) link.classList.add("is-active");
+  });
+</script>

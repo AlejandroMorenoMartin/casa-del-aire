@@ -1,0 +1,37 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+    <span class="small">© {year}. Casa del Aire.</span>
+    <span class="small" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+      <span data-i18n="components.footer.developer_prefix">Creado por</span>
+      <a
+        href="https://www.alejandromorenomartin.com"
+        target="_blank"
+        rel="noopener"
+        class="small link link-external"
+        data-i18n="components.footer.developer"
+      >Alejandro Moreno</a>
+    </span>
+    <button
+      class="link small"
+      data-modal-open="modal-condiciones"
+      style="background: none; border: none; cursor: pointer; font-family: var(--font-family); padding: 0;"
+      data-i18n="components.footer.conditions"
+    >
+      Condiciones
+    </button>
+  </div>
+
+  <div class="footer__lang">
+    {
+      ["es", "en", "fr", "pt"].map((lang) => (
+        <button class="modal-menu__link small" data-lang-btn={lang}>
+          {lang.toUpperCase()}
+        </button>
+      ))
+    }
+  </div>
+</footer>

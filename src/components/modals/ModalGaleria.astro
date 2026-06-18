@@ -1,0 +1,88 @@
+---
+---
+
+<div id="modal-galeria" class="modal" role="dialog" aria-modal="true" aria-label="Galería">
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__content modal__content--galeria">
+    <div class="modal__header">
+      <div style="display: flex; flex-direction: column; gap: var(--sp-xxs);">
+        <p class="regular-bold" id="galeria-title"></p>
+        <p class="regular" id="galeria-caption" style="color: var(--bl-100);"></p>
+      </div>
+      <button class="btn btn--icon modal__close" data-modal-close aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="galeria__image-wrapper">
+      <img id="galeria-img" src="" alt="" loading="lazy" />
+    </div>
+
+    <div class="galeria__controls">
+      <button class="btn--icon" id="galeria-prev" aria-label="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <span class="regular" id="galeria-counter" style="color: var(--bl-100);">1 / 39</span>
+      <button class="btn--icon" id="galeria-next" aria-label="Siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentImages: string[] = [];
+  let currentIndex = 0;
+  let currentGallery = "images";
+
+  function getImageMeta(index: number): { title: string; caption: string } {
+    const lang = (window as any).__lang ?? {};
+    const key = String(index + 1).padStart(2, "0");
+    const meta = lang?.components?.modals?.gallery?.[currentGallery]?.[key];
+    return { title: meta?.title ?? "", caption: meta?.caption ?? "" };
+  }
+
+  function openGaleria(images: string[], index: number, gallery = "images") {
+    currentImages = images;
+    currentIndex = index;
+    currentGallery = gallery;
+    update();
+    document.getElementById("modal-galeria")?.classList.add("is-open");
+  }
+
+  function update() {
+    const img = document.getElementById("galeria-img") as HTMLImageElement;
+
+    const counter = document.getElementById("galeria-counter");
+    const title = document.getElementById("galeria-title");
+    const caption = document.getElementById("galeria-caption");
+    const meta = getImageMeta(currentIndex);
+    const src = currentImages[currentIndex] ?? "";
+    if (img) img.src = src;
+
+    if (counter) counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    if (title) title.textContent = meta.title;
+    if (caption) caption.textContent = meta.caption;
+  }
+
+  document.getElementById("galeria-prev")?.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    update();
+  });
+
+  document.getElementById("galeria-next")?.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    update();
+  });
+
+  (window as any).openGaleria = openGaleria;
+
+  document.addEventListener("keydown", (e) => {
+    const galeria = document.getElementById("modal-galeria");
+    if (!galeria?.classList.contains("is-open")) return;
+    if (e.key === "ArrowLeft") { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; update(); }
+    if (e.key === "ArrowRight") { currentIndex = (currentIndex + 1) % currentImages.length; update(); }
+  });
+</script>

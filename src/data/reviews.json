@@ -1,0 +1,44 @@
+[
+  {
+    "author": "Victoria",
+    "rating": 5,
+    "date": "2026-05-01",
+    "text": "Casa perfecta, muy limpia, muy bien equipada (baños, cocina, libros...) muy cómoda, muy bien decorada, llena de detalles. Muy fácil de aparcar. Adán muy amable y cercano para cualquier necesidad. Pueblo muy tranquilo con muchos paseos por los alrededores.",
+    "source": "airbnb"
+  },
+  {
+    "author": "Ana",
+    "rating": 5,
+    "date": "2026-03-01",
+    "text": "¡Casa muy bonita, muy acogedora! Es tal y como se ve en las fotos. El salón con la chimenea se disfruta mucho. La casita del patio, perfecta también. Adán ha sido un excelente anfitrión, accesible y pendiente de nuestra estancia. ¡100% recomendable!",
+    "source": "airbnb"
+  },
+  {
+    "author": "Ricardo",
+    "rating": 5,
+    "date": "2025-12-01",
+    "text": "La casa es sencillamente increíble. El alojamiento es moderno sin perder su esencia, cómodo, súper completo, no le falta un detalle. Pusimos la chimenea y disfrutamos de unos ratos entrañables en familia. Adán estuvo muy atento y cercano. No dudéis, este es vuestro alojamiento si venís a esta zona.",
+    "source": "airbnb"
+  },
+  {
+    "author": "Alfonso",
+    "rating": 5,
+    "date": "2025-07-02",
+    "text": "Excelente casa rural a escasos kilómetros de Trujillo. Anfitrión muy atento, la casa con mucho gusto decorada, limpia, con todo lo necesario. Muy bien climatizada, tiene aire acondicionado en todas las estancias. Pueblo muy tranquilo y bien comunicado, totalmente recomendable.",
+    "source": "booking"
+  },
+  {
+    "author": "Pedro",
+    "rating": 5,
+    "date": "2025-04-25",
+    "text": "Es espacioso, cómodo, bien decorado, limpio y con todo lo necesario. A poco más de media hora de Cáceres, al lado de Trujillo y de Monfragüe. Ideal para hacer Birdwatching. La atención de Adán maravillosa. Tiene una alberca en el patio que es ideal para el verano. Muy recomendada.",
+    "source": "booking"
+  },
+  {
+    "author": "Thais",
+    "rating": 5,
+    "date": "2025-11-09",
+    "text": "Nos gustó mucho la decoración y las comodidades de la casa, la chimenea es estupenda. No puedo decir nada que no estuviera bien en el alojamiento.",
+    "source": "booking"
+  }
+]

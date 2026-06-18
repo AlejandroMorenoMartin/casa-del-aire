@@ -1,0 +1,21 @@
+---
+---
+
+<section class="content-wrapper">
+  <h2 class="large" data-i18n="pages.la-casa.info.title">Información</h2>
+
+  <ul class="info-list" style="display: flex; flex-direction: column; gap: 0.5rem; list-style: none; padding: 0; margin: 0;">
+    {[
+      "pages.la-casa.info.capacity",
+      "pages.la-casa.info.min_stay",
+      "pages.la-casa.info.checkin",
+      "pages.la-casa.info.checkout",
+      "pages.la-casa.info.cancellation",
+      "pages.la-casa.info.pets",
+      "pages.la-casa.info.smoking",
+      "pages.la-casa.info.quiet",
+    ].map((key) => (
+      <li class="regular" data-i18n={key} />
+    ))}
+  </ul>
+</section>

@@ -1,0 +1,16 @@
+Options -Indexes
+
+DirectoryIndex index.html
+
+# Trailing slash redirect for clean URLs
+RewriteEngine On
+RewriteBase /
+
+# Serve /entorno/ and /la-casa/ without .html extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+# 404 fallback
+ErrorDocument 404 /index.html

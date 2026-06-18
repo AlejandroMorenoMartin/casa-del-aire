@@ -1,0 +1,27 @@
+---
+interface Props {
+  images: string[];       // imágenes visibles en el grid
+  allImages?: string[];   // imágenes completas para la galería (si difiere)
+}
+const { images, allImages } = Astro.props;
+const galleryImages = allImages ?? images;
+const allJson = JSON.stringify(galleryImages);
+---
+
+<div class="image-carousel">
+  {
+    images.map((src, i) => {
+      const galleryIndex = galleryImages.indexOf(src);
+      const openIndex = galleryIndex !== -1 ? galleryIndex : i;
+      return (
+        <div
+          class="image-carousel__item"
+          onclick={`window.openGaleria(${allJson}, ${openIndex})`}
+          style="cursor: pointer;"
+        >
+          <img src={src} alt={`La Casa del Aire — interior y exteriores ${i + 1}`} loading="lazy" />
+        </div>
+      );
+    })
+  }
+</div>

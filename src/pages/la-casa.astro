@@ -1,0 +1,87 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NavbarPages from "@/components/layout/NavbarPages.astro";
+import Footer from "@/components/layout/Footer.astro";
+import PageHeader from "@/components/layout/PageHeader.astro";
+import ImageCarousel from "@/components/la-casa/ImageCarousel.astro";
+import Espacios from "@/components/la-casa/Espacios.astro";
+import Servicios from "@/components/la-casa/Servicios.astro";
+import InfoTable from "@/components/la-casa/InfoTable.astro";
+import Plano from "@/components/la-casa/Plano.astro";
+import GoogleReviews from "@/components/la-casa/GoogleReviews.astro";
+import Contacto from "@/components/la-casa/Contacto.astro";
+import BackToTop from "@/components/layout/BackToTop.astro";
+
+const previewImages = ["/images/04.webp", "/images/10.webp", "/images/12.webp", "/images/22.webp", "/images/31.webp"];
+const allImages = [
+  ...Array.from({ length: 38 }, (_, i) => `/images/${String(i + 1).padStart(2, "0")}.webp`),
+  "/images/house-plan01.webp",
+];
+---
+
+<Layout
+  title="La Casa | Casa del Aire — Alojamiento rural en Extremadura"
+  description="Conoce la casa. Tres habitaciones dobles, piscina, chimenea y terraza panorámica en la dehesa extremeña."
+>
+  <NavbarPages />
+
+  <main>
+    <!-- Header -->
+    <PageHeader
+      titleKey="pages.la-casa.header.title"
+      titleFallback="La Casa"
+      locationKey="pages.la-casa.header.location"
+      locationFallback="La Aldea del Obispo, Cáceres"
+      locationHref="https://maps.app.goo.gl/spd6VW1A2BxzAHvg8"
+      capacityKey="pages.la-casa.header.capacity"
+      capacityFallback="6-8 personas"
+    >
+      <button class="btn--icon" id="btn-galeria-header" aria-label="Ver galería">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      </button>
+      <button class="btn--icon" data-modal-open="modal-compartir" aria-label="Compartir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+    </PageHeader>
+
+    <!-- Imágenes -->
+    <section class="content-wrapper">
+      <h2 class="large" data-i18n="pages.la-casa.images.title">Imágenes</h2>
+      <ImageCarousel images={previewImages} allImages={allImages} />
+    </section>
+
+    <!-- Descripción -->
+    <section class="content-wrapper">
+      <h2 class="large" data-i18n="pages.la-casa.description.title">La Casa</h2>
+      <div style="display: flex; flex-direction: column; gap: var(--sp-md); color: var(--bl-300);">
+        <p class="regular" data-i18n="pages.la-casa.description.p1"></p>
+        <p class="regular" data-i18n="pages.la-casa.description.p2"></p>
+        <p class="regular" data-i18n="pages.la-casa.description.p3"></p>
+        <p class="regular" data-i18n="pages.la-casa.description.p4"></p>
+        <p class="regular" data-i18n="pages.la-casa.description.p5"></p>
+        <p class="regular" data-i18n="pages.la-casa.description.p6"></p>
+      </div>
+    </section>
+
+    <Espacios />
+    <Servicios />
+    <InfoTable />
+    <Plano />
+    <GoogleReviews />
+    <Contacto />
+  </main>
+
+  <Footer />
+  <BackToTop />
+</Layout>
+
+<script>
+  // Open gallery with all house images when header gallery button is clicked
+  const allImages = [
+    ...Array.from({ length: 38 }, (_, i) => `/images/${String(i + 1).padStart(2, "0")}.webp`),
+    "/images/house-plan01.webp",
+  ];
+  document.getElementById("btn-galeria-header")?.addEventListener("click", () => {
+    (window as any).openGaleria?.(allImages, 0);
+  });
+</script>

@@ -1,0 +1,151 @@
+export const translations = {
+  pages: {
+    home: {
+      header: {
+        title: "La Casa del Aire",
+        location: "La Aldea del Obispo, Cáceres",
+        capacity: "6-8 guests",
+      },
+    },
+    "la-casa": {
+      header: {
+        title: "The House",
+        subtitle: "Your home in the Extremaduran dehesa",
+        location: "La Aldea del Obispo, Cáceres",
+        capacity: "6-8 guests",
+      },
+      images: { title: "Images" },
+      description: {
+        title: "The House",
+        p1: "Just two hours from Madrid, in the village of La Aldea del Obispo (Cáceres, Extremadura), La Casa del Aire stands in the heart of the Extremaduran dehesa. This welcoming 19th-century stone house perfectly combines rustic charm with contemporary touches.",
+        p2: "Surrounded by a unique natural setting, it is the ideal place to disconnect and discover the most iconic landscapes and corners of the region: La Aldea del Obispo, Trujillo, Monfragüe National Park, Cáceres, the Villuercas-Ibores-Jara Geopark, Guadalupe or the La Vera region.",
+        p3: "You can also visit places of interest such as Bodegas Habla or enjoy Birding (birdwatching tourism), one of the most special experiences this land has to offer.",
+        p4: "The house accommodates up to 8 guests and is spread over two floors with three double bedrooms.",
+        p5: "On the ground floor you will find a living room with fireplace and two large sofas, a dining room, a fully equipped kitchen and a bathroom. The upper floor has two double bedrooms, a full bathroom and a spacious 25 m² terrace.",
+        p6: "The large patio, with barbecue, pool and terrace, connects to an independent apartment. This additional space offers a kitchen, dining room, bedroom and bathroom, with private access for greater comfort and privacy.",
+      },
+      spaces: {
+        title: "Spaces",
+        bedroom: "3 double bedrooms",
+        bathroom: "3 bathrooms",
+        dining: "Dining room",
+        living: "Living room",
+        fireplace: "Fireplace",
+        bbq: "Barbecue",
+        kitchen: "Kitchen",
+        pool: "Pool",
+        terrace: "Terrace",
+      },
+      services: {
+        title: "Services",
+        heating: "Heating",
+        ac: "Air conditioning",
+        wifi: "WiFi",
+        wood: "Firewood included",
+      },
+      info: {
+        title: "Information",
+        capacity: "Capacity: 6-8 guests",
+        min_stay: "Minimum stay: 2 nights",
+        checkin: "Check-in: from 16:00",
+        checkout: "Check-out: before 12:00",
+        cancellation: "Free cancellation up to 14 days before",
+        pets: "No pets allowed",
+        smoking: "No smoking indoors",
+        quiet: "Quiet hours from 23:00",
+      },
+      plan: {
+        title: "Floor Plan",
+        description: "Ground floor and first floor layout",
+      },
+      reviews: { title: "Reviews" },
+      contact: { title: "Contact" },
+    },
+    entorno: {
+      header: {
+        title: "Surroundings",
+      },
+      aldea: {
+        title: "La Aldea del Obispo",
+        p: "Nestled in the Cáceres peneplain, La Aldea del Obispo preserves the essence of Extremaduran villages: traditional stone and whitewash architecture, quiet streets and life centred around the square. The Baroque parish church of Nuestra Señora del Rosario presides over the village. From here begins the Puente de la Lavadera trail, an easy walk along the Tozo river. Silence and calm are its hallmarks. A place to wander without a destination and understand the rhythm of the dehesa.",
+      },
+      trujillo: {
+        title: "Trujillo",
+        p: "One of Extremadura's most historically significant cities. Its castle, main square and manor houses tell the story of a town tied to the conquistadors, birthplace of Francisco Pizarro. Its medieval atmosphere is perfectly preserved. A guided tour of the castle and old town is highly recommended to grasp the scale of its legacy. Cheese market every May. Extremaduran cuisine with black pudding, migas and torta del casar.",
+      },
+      bodegas: {
+        title: "Bodegas Habla",
+        p: "One of Extremadura's most innovative wineries, located in Trujillo, where winemaking tradition meets striking contemporary architecture. Guided tours with tasting included, set among their own vineyards in the dehesa. Their Habla del Silencio and Habla de la Tierra wines have received international recognition.",
+      },
+      birding: {
+        title: "Birding",
+        p: "Extremadura is one of Europe's most important birdwatching destinations, with over 300 species recorded each year. Black storks, black vultures, Iberian imperial eagles and common cranes during their autumn migrations fill the dehesa skies. The immediate surroundings of the house allow raptor watching without needing to travel at all.",
+      },
+      monfrague: {
+        title: "Monfragüe",
+        p: "Extremadura's great natural sanctuary, declared a National Park in 2007 and a UNESCO Biosphere Reserve. The Salto del Gitano is its most iconic viewpoint: a natural lookout over the Tagus river where colonies of Griffon vultures and other raptors soar overhead. Marked hiking trails for all levels in a landscape of singular beauty.",
+      },
+      caceres: {
+        title: "Cáceres",
+        p: "UNESCO World Heritage City, with one of the best-preserved medieval and Renaissance ensembles in Europe. 15th-century towers, palaces and churches coexist with a vibrant gastronomic and cultural scene. The guided night tour of the old town is unmissable. Filming location for Game of Thrones and House of the Dragon, internationally recognised for its exceptional heritage.",
+      },
+      jara: {
+        title: "Villuercas-Ibores-Jara Geopark",
+        p: "A UNESCO Global Geopark combining mountains, fossils and valleys of outstanding geological value, home to the oldest rocks on the Iberian Peninsula. It preserves villages of strong rural identity alongside mountain landscapes, river gorges and forests of great beauty. Known as the Extremaduran Appalachians, it offers hiking, climbing and nature routes for all levels.",
+      },
+      guadalupe: {
+        title: "Guadalupe",
+        p: "The Royal Monastery of Santa María de Guadalupe is a UNESCO World Heritage site and one of Spain's greatest religious and historical symbols. The village surrounding it is one of the most beautiful in the country, with Mudéjar architecture and cobbled streets perfect for strolling. Inside the monastery, a museum houses exceptional embroideries and paintings by El Greco.",
+      },
+      vera: {
+        title: "La Vera",
+        p: "A comarca at the foot of the Sierra de Gredos, known for its natural gorges, natural swimming pools in summer and a unique microclimate. Birthplace of La Vera paprika, a Protected Designation of Origin product and one of the most celebrated ingredients in Spanish cuisine. The Monastery of Yuste, where Charles V spent his final years, lies at the heart of the comarca.",
+      },
+    },
+  },
+  components: {
+    navbar: { reserve: "Book", menu: "Menu" },
+    footer: {
+      copyright: "© 2025. La Casa del Aire.",
+      developer_prefix: "Created by",
+      developer: "Alejandro Moreno",
+      conditions: "Terms",
+    },
+    modals: {
+      menu: { pages_title: "Pages", home: "Visit", casa: "The House", entorno: "Surroundings", lang_title: "Language" },
+      reserve: {
+        title: "Book your stay",
+        description: "The house is rented as a whole and prices can be consulted for personalised stays.",
+        contact: "Contact",
+        loading: "Loading booking engine...",
+      },
+      share: { title: "Share", copy: "Copy link", copied: "Copied!" },
+      conditions: { title: "House rules" },
+      gallery: {
+        close: "Close",
+        prev: "Previous",
+        next: "Next",
+        environment: {
+          "01": { title: "Parish Church of Our Lady of the Rosary (La Aldea del Obispo)", caption: "A Baroque-style temple built on an earlier structure, preserving historical elements in its bell tower and stone walls. It is the main monument of the town and the cultural and religious center of the community." },
+          "02": { title: "Tozo River (natural surroundings of La Aldea del Obispo)", caption: "A landscape of the Extremaduran dehesa crossed by the Tozo River, flowing quietly among holm oaks and meadows. Its calm waters and natural setting offer ideal routes for walking and enjoying local biodiversity." },
+          "03": { title: "Trujillo Castle", caption: "A fortress of Arab origin built between the 9th and 12th centuries, crowning the highest point of the city. From its walls, you can enjoy spectacular panoramic views of the region and Trujillo's historic center." },
+          "04": { title: "Trujillo Main Square", caption: "The heart of the city, surrounded by Renaissance palaces and historic buildings. The equestrian statue of Francisco Pizarro stands out, along with the lively atmosphere of terraces and cultural events." },
+          "05": { title: "Bodegas Habla – Facade", caption: "The facade of Bodegas Habla reflects a contemporary design that harmonizes with the natural environment of the Extremaduran dehesa. Its avant-garde architecture symbolizes the winery's innovative philosophy and makes it a benchmark in wine tourism." },
+          "06": { title: "Bodegas Habla – Barrel Room", caption: "A space where the wine rests in French oak barrels, following an aging process that gives character and quality to Habla's signature wines. The room combines tradition and technology, creating a unique atmosphere that enhances each vintage." },
+          "07": { title: "Birding – Griffon Vultures", caption: "Griffon vultures, with their majestic wings, fly over the skies of Extremadura searching for air currents that allow them to glide for miles. Their presence is one of the great attractions for birdwatchers." },
+          "08": { title: "Birding – Great Bustard", caption: "The Great Bustard is the world's heaviest flying bird and an extremely cautious biological treasure of the Iberian dehesas, making it rare and difficult to sight." },
+          "09": { title: "Salto del Gitano in Monfragüe", caption: "One of the park's most iconic spots, where rocky cliffs rise imposingly above the Tagus River. It's a prime location for observing birds of prey like griffon vultures, black storks, and Spanish imperial eagles." },
+          "10": { title: "Tagus River Meander in Monfragüe", caption: "Panoramic view of the Tagus meanders winding through mountain ranges covered in Mediterranean forests. The landscape conveys the natural grandeur of the park and its role as one of Spain's most valuable protected areas." },
+          "11": { title: "Monumental Cáceres at night", caption: "Night view of the monumental complex of Cáceres, declared a World Heritage Site by UNESCO. The lighting highlights the medieval walls, towers, and palaces that have made the city one of the best-preserved old towns in Europe." },
+          "12": { title: "Plaza Mayor of Cáceres", caption: "An emblematic space where history and local life converge, surrounded by arcades, Renaissance palaces, and churches. The Plaza Mayor is the gateway to the old town, a meeting point for both visitors and locals." },
+          "13": { title: "Sierra de las Villuercas", caption: "Panoramic view of the Sierra de las Villuercas, the heart of the UNESCO-designated geopark. Its rocky ridges and deep valleys reveal millions of years of geological history in a unique Extremaduran landscape." },
+          "14": { title: "Natural Viewpoint in the Geopark", caption: "A viewpoint framed by rock formations offers breathtaking views of the geopark. The combination of nature and geological heritage makes this an essential stop for hiking and photography lovers." },
+          "15": { title: "View of the Monastery of Guadalupe", caption: "The Royal Monastery of Santa María de Guadalupe, a UNESCO World Heritage Site, dominates the town's skyline. Founded in the 14th century, it was an important pilgrimage center and preserves an impressive artistic and architectural ensemble." },
+          "16": { title: "Cloister of the Monastery of Guadalupe", caption: "The monastery's Mudejar cloister offers a serene and monumental atmosphere, with a Gothic pavilion in the center surrounded by gardens and arcades. A place that reflects the cultural and spiritual richness of this historic site." },
+          "17": { title: "Natural Gorge in La Vera", caption: "One of the many crystal-clear gorges that run through the region of La Vera. Between waterfalls and natural pools, these spots are perfect for cooling off in summer and enjoying nature." },
+          "18": { title: "Villanueva de la Vera", caption: "Charming street in Villanueva de la Vera, where traditional architecture with wooden frameworks, flowered balconies, and a warm atmosphere is preserved. This village, declared a Historic-Artistic Site, embodies the authentic essence of La Vera." },
+        },
+      },
+    },
+  },
+};

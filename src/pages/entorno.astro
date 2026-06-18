@@ -1,0 +1,99 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NavbarPages from "@/components/layout/NavbarPages.astro";
+import Footer from "@/components/layout/Footer.astro";
+import PageHeader from "@/components/layout/PageHeader.astro";
+import DestinoSection from "@/components/entorno/DestinoSection.astro";
+import BackToTop from "@/components/layout/BackToTop.astro";
+
+const destinos = [
+  {
+    titleKey: "pages.entorno.aldea.title",
+    title: "La Aldea del Obispo",
+    pKey: "pages.entorno.aldea.p",
+    images: ["/images/aldea1.webp", "/images/aldea2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.trujillo.title",
+    title: "Trujillo",
+    pKey: "pages.entorno.trujillo.p",
+    images: ["/images/trujillo1.webp", "/images/trujillo2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.bodegas.title",
+    title: "Bodegas Habla",
+    pKey: "pages.entorno.bodegas.p",
+    images: ["/images/bodegas1.webp", "/images/bodegas2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.birding.title",
+    title: "Birding",
+    pKey: "pages.entorno.birding.p",
+    images: ["/images/birding1.webp", "/images/birding2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.monfrague.title",
+    title: "Monfragüe",
+    pKey: "pages.entorno.monfrague.p",
+    images: ["/images/monfrague1.webp", "/images/monfrague2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.caceres.title",
+    title: "Cáceres",
+    pKey: "pages.entorno.caceres.p",
+    images: ["/images/caceres1.webp", "/images/caceres2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.jara.title",
+    title: "Geoparque Villuercas-Ibores-Jara",
+    pKey: "pages.entorno.jara.p",
+    images: ["/images/jara1.webp", "/images/jara2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.guadalupe.title",
+    title: "Guadalupe",
+    pKey: "pages.entorno.guadalupe.p",
+    images: ["/images/guadalupe1.webp", "/images/guadalupe2.webp"],
+  },
+  {
+    titleKey: "pages.entorno.vera.title",
+    title: "La Vera",
+    pKey: "pages.entorno.vera.p",
+    images: ["/images/vera1.webp", "/images/vera2.webp"],
+  },
+];
+
+// Array completo de todas las imágenes de entorno — en el mismo orden que los destinos
+const allEntornoImages = destinos.flatMap((d) => d.images);
+---
+
+<Layout
+  title="Entorno | Casa del Aire — Alojamiento rural en Extremadura"
+  description="Explora el entorno. Trujillo, Monfragüe, Cáceres, Guadalupe y la dehesa extremeña a pocos minutos."
+>
+  <NavbarPages />
+
+  <main>
+    <!-- Header -->
+    <PageHeader
+      titleKey="pages.entorno.header.title"
+      titleFallback="Entorno"
+    >
+      <button class="btn--icon" data-modal-open="modal-compartir" aria-label="Compartir">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+    </PageHeader>
+
+    <!-- Destinos -->
+    {destinos.map((d, i) => (
+      <DestinoSection
+        {...d}
+        allImages={allEntornoImages}
+        startIndex={i * 2}
+      />
+    ))}
+  </main>
+
+  <Footer />
+  <BackToTop />
+</Layout>

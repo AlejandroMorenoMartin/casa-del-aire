@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@/components/layout/Navbar.astro";
+import VideoHero from "@/components/home/VideoHero.astro";
+---
+
+<Layout
+  title="La Casa del Aire | Alojamiento rural en Extremadura"
+  description="Casa rural en la dehesa extremeña, a dos horas de Madrid. Piscina, chimenea y naturaleza."
+>
+  <Navbar />
+  <main>
+    <VideoHero />
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: 100dvh;
+  }
+</style>

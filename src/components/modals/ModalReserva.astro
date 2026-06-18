@@ -1,0 +1,62 @@
+---
+---
+
+<div id="modal-reserva" class="modal" role="dialog" aria-modal="true" aria-label="Reserva">
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__content">
+    <div class="modal__header">
+      <h2 class="large" data-i18n="components.modals.reserve.title">Reserva tu estancia</h2>
+      <button class="btn btn--icon modal__close" data-modal-close aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--sp-xs);">
+      <p class="regular" data-i18n="components.modals.reserve.description">
+        El alquiler de la casa es de tipo íntegro y se pueden consultar precios para estancias personalizadas.
+      </p>
+      <a
+        href="#contacto"
+        class="link link-external regular"
+        data-i18n="components.modals.reserve.contact"
+      >
+        Contacto
+      </a>
+    </div>
+
+    <div id="amenitiz-widget" style="min-height: 200px;"></div>
+  </div>
+</div>
+
+<script>
+  const AMENITIZ_URL = "https://casa-del-aire.amenitiz.io/booking/room#DatesGuests-BE";
+
+  document.addEventListener("click", (e) => {
+    const trigger = (e.target as Element).closest('[data-modal-open="modal-reserva"]');
+    if (trigger) {
+      requestAnimationFrame(initWidget);
+    }
+  });
+
+  function initWidget() {
+    const container = document.getElementById("amenitiz-widget");
+    if (!container || container.querySelector("iframe")) return;
+
+    const loader = document.createElement("p");
+    loader.className = "small";
+    loader.style.padding = "2rem 0";
+    loader.textContent = "Cargando motor de reservas...";
+    container.appendChild(loader);
+
+    const iframe = document.createElement("iframe");
+    iframe.src = AMENITIZ_URL;
+    iframe.width = "100%";
+    iframe.height = "700";
+    iframe.style.border = "none";
+    iframe.loading = "lazy";
+    iframe.title = "Motor de reservas";
+    iframe.addEventListener("load", () => loader.remove());
+    container.appendChild(iframe);
+  }
+</script>

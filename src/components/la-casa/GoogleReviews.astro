@@ -1,0 +1,30 @@
+---
+import reviews from "@/data/reviews.json";
+---
+
+<section class="content-wrapper">
+  <h2 class="large" data-i18n="pages.la-casa.reviews.title">
+    Lo que dicen nuestros huéspedes
+  </h2>
+
+  <div class="reviews-grid">
+    {
+      reviews.map((r) => (
+        <article class="review-card">
+          <div class="review-card__header">
+            <div>
+              <p class="regular-bold">{r.author}</p>
+              <p class="small" style="color: var(--bl-100);">
+                {new Date(r.date).toLocaleDateString("es-ES", { year: "numeric", month: "long" })}
+              </p>
+            </div>
+          </div>
+          <div class="review-card__stars">{"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}</div>
+          <p class="regular" style="margin-top: var(--sp-sm); color: var(--bl-300);">
+            {r.text}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</section>
