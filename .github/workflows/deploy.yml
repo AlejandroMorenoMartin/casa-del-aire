@@ -30,12 +30,12 @@ jobs:
         run: pnpm build
 
       - name: Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 22
-          source: "dist/*"
-          target: /clickandbuilds/CasadelAire
-          strip_components: 1
+        run: |
+          sudo apt-get install -y lftp
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            open sftp://${{ secrets.SFTP_USER }}:${{ secrets.SFTP_PASSWORD }}@${{ secrets.SFTP_HOST }}:22;
+            mirror -R --delete --verbose dist/ /clickandbuilds/CasadelAire/;
+            bye
+          "
