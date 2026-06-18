@@ -3,21 +3,27 @@ import Logo from "./Logo.astro";
 ---
 
 <nav class="navbar navbar--solid">
-  <a href="/" class="navbar__logo navbar__logo--dark" aria-label="La Casa del Aire — inicio">
-    <Logo />
-  </a>
-
-  <div class="navbar__actions">
-<button class="btn--icon" data-modal-open="modal-menu" aria-label="Abrir menú">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
+  <div class="navbar__col navbar__col--start">
+    <button class="btn btn--dark navbar__reserve" data-modal-open="modal-reserva" data-i18n="components.navbar.reserve">
+      Reservar
     </button>
   </div>
-</nav>
 
-<button class="btn btn--dark navbar__reserve-fixed" data-modal-open="modal-reserva" data-i18n="components.navbar.reserve">
-  Reservar
-</button>
+  <div class="navbar__col navbar__col--center">
+    <a href="/" class="navbar__logo navbar__logo--dark" aria-label="La Casa del Aire — inicio">
+      <Logo />
+    </a>
+  </div>
+
+  <div class="navbar__col navbar__col--end">
+    <div class="navbar__actions">
+      <button class="btn--icon" data-modal-open="modal-menu" aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

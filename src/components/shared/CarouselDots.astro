@@ -1,0 +1,39 @@
+---
+interface Props {
+  count: number;
+}
+const { count } = Astro.props;
+---
+
+<div class="carousel-dots" aria-hidden="true">
+  {Array.from({ length: count }).map((_, i) => (
+    <span class="carousel-dots__dot" data-index={i}></span>
+  ))}
+</div>
+
+<script>
+  function initCarouselDots(wrapper: Element) {
+    const track = wrapper.querySelector(".image-carousel");
+    const dots = wrapper.querySelectorAll(".carousel-dots__dot");
+    if (!track || dots.length === 0) return;
+
+    const items = track.querySelectorAll(".image-carousel__item");
+    dots[0]?.classList.add("carousel-dots__dot--active");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Array.from(items).indexOf(entry.target);
+            dots.forEach((dot, i) => dot.classList.toggle("carousel-dots__dot--active", i === index));
+          }
+        });
+      },
+      { root: track, threshold: 0.6 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  }
+
+  document.querySelectorAll(".image-carousel-wrapper").forEach(initCarouselDots);
+</script>

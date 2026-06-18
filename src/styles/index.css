@@ -207,11 +207,10 @@ h2 {
   left: 0;
   right: 0;
   z-index: var(--z-navbar);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: flex-end;
-  padding: var(--sp-sm) var(--sp-xl);
-  height: 64px;
+  padding: 1rem;
 }
 
 .navbar--transparent {
@@ -229,11 +228,24 @@ h2 {
   transition: opacity var(--transition-btn);
 }
 
+.navbar__col {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__col--start {
+  justify-content: flex-start;
+}
+
+.navbar__col--center {
+  justify-content: center;
+}
+
+.navbar__col--end {
+  justify-content: flex-end;
+}
 
 .navbar__logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   color: var(--wh-500);
@@ -258,29 +270,17 @@ h2 {
   gap: var(--sp-md);
 }
 
-.navbar__reserve-fixed {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-  z-index: var(--z-navbar);
+.navbar__reserve {
   white-space: nowrap;
 }
 
-@media (min-width: 1201px) {
-  .navbar__reserve-fixed {
-    top: var(--sp-sm);
-    left: var(--sp-xl);
-    bottom: auto;
-  }
-}
-
-.btn.navbar__reserve-fixed {
+.btn.navbar__reserve {
   background: var(--pr-300);
   color: var(--wh-500);
   border-color: var(--pr-300);
 }
 
-.btn.navbar__reserve-fixed:hover {
+.btn.navbar__reserve:hover {
   background: var(--pr-400);
   border-color: var(--pr-400);
   color: var(--wh-500);
@@ -514,7 +514,7 @@ h2 {
 .modal--menu {
   align-items: flex-start;
   justify-content: flex-end;
-  padding-top: 64px;
+  padding-top: 80px;
   padding-right: var(--sp-xl);
   background: transparent;
 }
@@ -638,6 +638,24 @@ h2 {
   transform: scale(1.04);
 }
 
+.image-carousel-wrapper {
+  width: 100%;
+}
+
+.image-carousel--destino {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 18rem;
+}
+
+.image-carousel--destino .image-carousel__item:first-child {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.carousel-dots {
+  display: none;
+}
+
 /* =============================================
    CHIP
    ============================================= */
@@ -729,7 +747,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: var(--sp-xl);
-  padding: var(--sp-lg) var(--sp-xl);
+  padding: 1rem;
   border-top: var(--border-thin) var(--wh-300);
   font-size: var(--font-size-small);
   color: var(--bl-100);
@@ -779,17 +797,36 @@ h2 {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: var(--sp-xs);
-    padding: 0 var(--sp-md);
+    gap: 1rem;
     scrollbar-width: none;
   }
   .image-carousel::-webkit-scrollbar {
     display: none;
   }
-  .image-carousel__item {
-    flex: 0 0 calc(50% - var(--sp-xxs));
+  .image-carousel__item,
+  .image-carousel--destino .image-carousel__item {
+    flex: 0 0 90%;
     height: 12rem;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-xs);
+    margin-top: var(--sp-sm);
+  }
+  .carousel-dots__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--wh-300);
+    transition: background var(--transition-btn), transform var(--transition-btn);
+  }
+  .carousel-dots__dot--active {
+    background: var(--pr-300);
+    transform: scale(1.2);
   }
 
   .reviews-grid {

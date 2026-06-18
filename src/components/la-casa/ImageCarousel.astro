@@ -1,4 +1,6 @@
 ---
+import CarouselDots from "@/components/shared/CarouselDots.astro";
+
 interface Props {
   images: string[];       // imágenes visibles en el grid
   allImages?: string[];   // imágenes completas para la galería (si difiere)
@@ -8,20 +10,23 @@ const galleryImages = allImages ?? images;
 const allJson = JSON.stringify(galleryImages);
 ---
 
-<div class="image-carousel">
-  {
-    images.map((src, i) => {
-      const galleryIndex = galleryImages.indexOf(src);
-      const openIndex = galleryIndex !== -1 ? galleryIndex : i;
-      return (
-        <div
-          class="image-carousel__item"
-          onclick={`window.openGaleria(${allJson}, ${openIndex})`}
-          style="cursor: pointer;"
-        >
-          <img src={src} alt={`La Casa del Aire — interior y exteriores ${i + 1}`} loading="lazy" />
-        </div>
-      );
-    })
-  }
+<div class="image-carousel-wrapper">
+  <div class="image-carousel">
+    {
+      images.map((src, i) => {
+        const galleryIndex = galleryImages.indexOf(src);
+        const openIndex = galleryIndex !== -1 ? galleryIndex : i;
+        return (
+          <div
+            class="image-carousel__item"
+            onclick={`window.openGaleria(${allJson}, ${openIndex})`}
+            style="cursor: pointer;"
+          >
+            <img src={src} alt={`La Casa del Aire — interior y exteriores ${i + 1}`} loading="lazy" />
+          </div>
+        );
+      })
+    }
+  </div>
+  <CarouselDots count={images.length} />
 </div>

@@ -1,4 +1,6 @@
 ---
+import CarouselDots from "@/components/shared/CarouselDots.astro";
+
 interface Props {
   titleKey: string;
   title: string;          // nombre del destino, para el alt de las imágenes
@@ -17,24 +19,25 @@ const allJson = JSON.stringify(allImages);
   </div>
 
   <!-- 2 imágenes -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-md); margin-bottom: var(--sp-xl);">
-    {
-      images.map((src, i) => (
-        <div
-          style="overflow: hidden; height: 18rem; cursor: pointer; border-radius: var(--border-radius-sm);"
-          onclick={`window.openGaleria(${allJson}, ${startIndex + i}, 'environment')`}
-        >
-          <img
-            src={src}
-            alt={`${title} — entorno de La Casa del Aire`}
-            loading="lazy"
-            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.2s ease;"
-            onmouseover="this.style.transform='scale(1.04)'"
-            onmouseout="this.style.transform='scale(1)'"
-          />
-        </div>
-      ))
-    }
+  <div class="image-carousel-wrapper" style="margin-bottom: var(--sp-xl);">
+    <div class="image-carousel image-carousel--destino">
+      {
+        images.map((src, i) => (
+          <div
+            class="image-carousel__item"
+            style="cursor: pointer;"
+            onclick={`window.openGaleria(${allJson}, ${startIndex + i}, 'environment')`}
+          >
+            <img
+              src={src}
+              alt={`${title} — entorno de La Casa del Aire`}
+              loading="lazy"
+            />
+          </div>
+        ))
+      }
+    </div>
+    <CarouselDots count={images.length} />
   </div>
 
   <p class="regular" style="color: var(--bl-300);" data-i18n={pKey}></p>
