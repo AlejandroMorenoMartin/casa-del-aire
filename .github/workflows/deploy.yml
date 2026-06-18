@@ -30,13 +30,15 @@ jobs:
         run: pnpm build
 
       - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          username: ${{ secrets.SFTP_USER }}
           server: ${{ secrets.SFTP_HOST }}
-          port: 22
-          local_path: ./dist/*
-          remote_path: /clickandbuilds/CasadelAire
-          sftp_only: true
+          username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          delete_remote_files: true
+          protocol: ftps
+          port: 21
+          local-dir: ./dist/
+          server-dir: /clickandbuilds/CasadelAire/
+          exclude: |
+            **/.git*
+            **/.git*/**
