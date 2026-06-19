@@ -2,7 +2,7 @@ export const translations = {
   pages: {
     home: {
       header: {
-        title: "La Casa del Aire",
+        title: "Casa del Aire",
         location: "La Aldea del Obispo, Cáceres",
         capacity: "6-8 guests",
       },
@@ -17,7 +17,7 @@ export const translations = {
       images: { title: "Images" },
       description: {
         title: "Description",
-        p1: "Just two hours from Madrid, in the village of La Aldea del Obispo (Cáceres, Extremadura), La Casa del Aire stands in the heart of the Extremaduran dehesa. This welcoming 19th-century stone house perfectly combines rustic charm with contemporary touches.",
+        p1: "Just two hours from Madrid, in the village of La Aldea del Obispo (Cáceres, Extremadura), Casa del Aire stands in the heart of the Extremaduran dehesa. This welcoming 19th-century stone house perfectly combines rustic charm with contemporary touches.",
         p2: "Surrounded by a unique natural setting, it is the ideal place to disconnect and discover the most iconic landscapes and corners of the region: La Aldea del Obispo, Trujillo, Monfragüe National Park, Cáceres, the Villuercas-Ibores-Jara Geopark, Guadalupe or the La Vera region.",
         p3: "You can also visit places of interest such as Bodegas Habla or enjoy Birding (birdwatching tourism), one of the most special experiences this land has to offer.",
         p4: "The house accommodates up to 8 guests and is spread over two floors with three double bedrooms.",
@@ -106,7 +106,7 @@ export const translations = {
   components: {
     navbar: { reserve: "Book", menu: "Menu" },
     footer: {
-      copyright: "© 2025. La Casa del Aire.",
+      copyright: "© 2025. Casa del Aire.",
       developer_prefix: "Created by",
       developer: "Alejandro Moreno",
       conditions: "Terms",

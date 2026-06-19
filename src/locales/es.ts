@@ -2,7 +2,7 @@ export const translations = {
   pages: {
     home: {
       header: {
-        title: "La Casa del Aire",
+        title: "Casa del Aire",
         location: "La Aldea del Obispo, Cáceres",
         capacity: "6-8 personas",
       },
@@ -17,7 +17,7 @@ export const translations = {
       images: { title: "Imágenes" },
       description: {
         title: "Descripción",
-        p1: "Situada a solo dos horas de Madrid, en la población de La Aldea del Obispo (Cáceres, Extremadura), La Casa del Aire se alza en plena dehesa extremeña. Esta acogedora casa de piedra del siglo XIX combina a la perfección el encanto rústico con detalles contemporáneos.",
+        p1: "Situada a solo dos horas de Madrid, en la población de La Aldea del Obispo (Cáceres, Extremadura), Casa del Aire se alza en plena dehesa extremeña. Esta acogedora casa de piedra del siglo XIX combina a la perfección el encanto rústico con detalles contemporáneos.",
         p2: "Rodeada de un entorno natural único, es el lugar ideal para desconectar y descubrir los paisajes y rincones más emblemáticos de la región: La Aldea del Obispo, Trujillo, el Parque Nacional de Monfragüe, Cáceres, el Geoparque Villuercas-Ibores-Jara, Guadalupe o la comarca de La Vera.",
         p3: "Además, podrás realizar escapadas a lugares de interés como Bodegas Habla o disfrutar del Birding (turismo ornitológico), una de las experiencias más especiales que ofrece esta tierra.",
         p4: "La casa tiene capacidad para alojar hasta 8 personas y se distribuye en dos plantas con tres habitaciones dobles.",
@@ -109,7 +109,7 @@ export const translations = {
       menu: "Menú",
     },
     footer: {
-      copyright: "© 2025. La Casa del Aire.",
+      copyright: "© 2025. Casa del Aire.",
       developer_prefix: "Creado por",
       developer: "Alejandro Moreno",
       conditions: "Condiciones",
@@ -150,7 +150,7 @@ export const translations = {
           "05": { title: "Salón", caption: "Vista frontal de la zona del salón. En primer plano vemos la gran mesa de centro artesanal con los dos sofás a ambos lados de la chimenea." },
           "06": { title: "Salón", caption: "Otra de las vistas del acogedor salón con chimenea. Al fondo se observa la hornacina que comunica con el comedor. En ella encontramos una serie de vasijas y jarrones de barro originales de la vivienda." },
           "07": { title: "Puerta de acceso", caption: "Vista de la puerta de acceso desde el salón. El área de estar cuenta con una TV de 42 pulgadas y con las bóvedas y elementos de ladrillo originales de la construcción de 1890." },
-          "08": { title: "Salón", caption: "Zona del salón destinada a la TV. En La Casa del Aire no tendrás que preocuparte por la leña: te la facilitamos nosotros." },
+          "08": { title: "Salón", caption: "Zona del salón destinada a la TV. En Casa del Aire no tendrás que preocuparte por la leña: te la facilitamos nosotros." },
           "09": { title: "Comedor", caption: "Otra de las vistas del comedor, donde podemos ver las bóvedas originales de la casa. Al fondo tenemos el acceso a la cocina y al baño de esta planta." },
           "10": { title: "Comedor", caption: "El comedor en detalle: se aprecian las bóvedas originales de la casa que dan profundidad al espacio." },
           "11": { title: "Baño", caption: "Imagen del baño completo de la planta baja." },

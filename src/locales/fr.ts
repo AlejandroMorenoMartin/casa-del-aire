@@ -2,7 +2,7 @@ export const translations = {
   pages: {
     home: {
       header: {
-        title: "La Casa del Aire",
+        title: "Casa del Aire",
         location: "La Aldea del Obispo, Cáceres",
         capacity: "6-8 personnes",
       },
@@ -17,7 +17,7 @@ export const translations = {
       images: { title: "Images" },
       description: {
         title: "Description",
-        p1: "À seulement deux heures de Madrid, dans le village de La Aldea del Obispo (Cáceres, Estrémadure), La Casa del Aire se dresse en pleine dehesa estrémègne. Cette chaleureuse maison en pierre du XIXe siècle allie à la perfection le charme rustique aux touches contemporaines.",
+        p1: "À seulement deux heures de Madrid, dans le village de La Aldea del Obispo (Cáceres, Estrémadure), Casa del Aire se dresse en pleine dehesa estrémègne. Cette chaleureuse maison en pierre du XIXe siècle allie à la perfection le charme rustique aux touches contemporaines.",
         p2: "Entourée d'un environnement naturel unique, c'est l'endroit idéal pour se déconnecter et découvrir les paysages et recoins les plus emblématiques de la région : La Aldea del Obispo, Trujillo, le Parc National de Monfragüe, Cáceres, le Géoparc Villuercas-Ibores-Jara, Guadalupe ou la comarca de La Vera.",
         p3: "Vous pourrez également visiter des lieux d'intérêt comme Bodegas Habla ou profiter du Birding (tourisme ornithologique), l'une des expériences les plus spéciales que cette terre a à offrir.",
         p4: "La maison peut accueillir jusqu'à 8 personnes et se répartit sur deux étages avec trois chambres doubles.",
@@ -104,7 +104,7 @@ export const translations = {
   components: {
     navbar: { reserve: "Réserver", menu: "Menu" },
     footer: {
-      copyright: "© 2025. La Casa del Aire.",
+      copyright: "© 2025. Casa del Aire.",
       developer_prefix: "Créé par",
       developer: "Alejandro Moreno",
       conditions: "Conditions",

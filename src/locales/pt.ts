@@ -2,7 +2,7 @@ export const translations = {
   pages: {
     home: {
       header: {
-        title: "La Casa del Aire",
+        title: "Casa del Aire",
         location: "La Aldea del Obispo, Cáceres",
         capacity: "6-8 pessoas",
       },
@@ -17,7 +17,7 @@ export const translations = {
       images: { title: "Imagens" },
       description: {
         title: "Descrição",
-        p1: "A apenas duas horas de Madrid, na localidade de La Aldea del Obispo (Cáceres, Extremadura), La Casa del Aire ergue-se em plena dehesa extremenha. Esta acolhedora casa de pedra do século XIX combina na perfeição o charme rústico com detalhes contemporâneos.",
+        p1: "A apenas duas horas de Madrid, na localidade de La Aldea del Obispo (Cáceres, Extremadura), Casa del Aire ergue-se em plena dehesa extremenha. Esta acolhedora casa de pedra do século XIX combina na perfeição o charme rústico com detalhes contemporâneos.",
         p2: "Rodeada por um ambiente natural único, é o lugar ideal para desligar e descobrir as paisagens e recantos mais emblemáticos da região: La Aldea del Obispo, Trujillo, o Parque Nacional de Monfragüe, Cáceres, o Geoparque Villuercas-Ibores-Jara, Guadalupe ou a comarca de La Vera.",
         p3: "Poderá ainda visitar lugares de interesse como as Bodegas Habla ou desfrutar do Birding (turismo ornitológico), uma das experiências mais especiais que esta terra tem para oferecer.",
         p4: "A casa tem capacidade para alojar até 8 pessoas e distribui-se em dois andares com três quartos duplos.",
@@ -104,7 +104,7 @@ export const translations = {
   components: {
     navbar: { reserve: "Reservar", menu: "Menu" },
     footer: {
-      copyright: "© 2025. La Casa del Aire.",
+      copyright: "© 2025. Casa del Aire.",
       developer_prefix: "Criado por",
       developer: "Alejandro Moreno",
       conditions: "Condições",
