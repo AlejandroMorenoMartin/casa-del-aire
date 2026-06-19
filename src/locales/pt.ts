@@ -16,7 +16,7 @@ export const translations = {
       },
       images: { title: "Imagens" },
       description: {
-        title: "A Casa",
+        title: "Descrição",
         p1: "A apenas duas horas de Madrid, na localidade de La Aldea del Obispo (Cáceres, Extremadura), La Casa del Aire ergue-se em plena dehesa extremenha. Esta acolhedora casa de pedra do século XIX combina na perfeição o charme rústico com detalhes contemporâneos.",
         p2: "Rodeada por um ambiente natural único, é o lugar ideal para desligar e descobrir as paisagens e recantos mais emblemáticos da região: La Aldea del Obispo, Trujillo, o Parque Nacional de Monfragüe, Cáceres, o Geoparque Villuercas-Ibores-Jara, Guadalupe ou a comarca de La Vera.",
         p3: "Poderá ainda visitar lugares de interesse como as Bodegas Habla ou desfrutar do Birding (turismo ornitológico), uma das experiências mais especiais que esta terra tem para oferecer.",

@@ -482,6 +482,23 @@ h2 {
 .modal__content--galeria {
   max-width: 960px;
   width: 95%;
+  padding-bottom: calc(var(--sp-xl) - var(--sp-xs));
+}
+
+.galeria__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxs);
+}
+
+.galeria__title {
+  padding-right: calc(1rem + 36px + var(--sp-xs));
+}
+
+.modal__close--galeria {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 
@@ -526,7 +543,7 @@ h2 {
 .modal-menu__content {
   position: relative;
   z-index: var(--z-modal);
-  width: 240px;
+  width: 180px;
   background: var(--wh-500);
   border: var(--border-thin) var(--wh-300);
   border-radius: var(--border-radius-md);

@@ -16,7 +16,7 @@ export const translations = {
       },
       images: { title: "Images" },
       description: {
-        title: "La Maison",
+        title: "Description",
         p1: "À seulement deux heures de Madrid, dans le village de La Aldea del Obispo (Cáceres, Estrémadure), La Casa del Aire se dresse en pleine dehesa estrémègne. Cette chaleureuse maison en pierre du XIXe siècle allie à la perfection le charme rustique aux touches contemporaines.",
         p2: "Entourée d'un environnement naturel unique, c'est l'endroit idéal pour se déconnecter et découvrir les paysages et recoins les plus emblématiques de la région : La Aldea del Obispo, Trujillo, le Parc National de Monfragüe, Cáceres, le Géoparc Villuercas-Ibores-Jara, Guadalupe ou la comarca de La Vera.",
         p3: "Vous pourrez également visiter des lieux d'intérêt comme Bodegas Habla ou profiter du Birding (tourisme ornithologique), l'une des expériences les plus spéciales que cette terre a à offrir.",

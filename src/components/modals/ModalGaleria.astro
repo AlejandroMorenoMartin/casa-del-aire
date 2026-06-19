@@ -4,16 +4,15 @@
 <div id="modal-galeria" class="modal" role="dialog" aria-modal="true" aria-label="Galería">
   <div class="modal__overlay" data-modal-close></div>
   <div class="modal__content modal__content--galeria">
-    <div class="modal__header">
-      <div style="display: flex; flex-direction: column; gap: var(--sp-xxs);">
-        <p class="regular-bold" id="galeria-title"></p>
-        <p class="regular" id="galeria-caption" style="color: var(--bl-100);"></p>
-      </div>
-      <button class="btn btn--icon modal__close" data-modal-close aria-label="Cerrar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
-      </button>
+    <button class="btn btn--icon modal__close--galeria" data-modal-close aria-label="Cerrar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <div class="galeria__text">
+      <p class="regular-bold galeria__title" id="galeria-title"></p>
+      <p class="regular" id="galeria-caption" style="color: var(--bl-100);"></p>
     </div>
 
     <div class="galeria__image-wrapper">
